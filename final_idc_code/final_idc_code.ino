@@ -165,13 +165,6 @@ void sendSignal(bool passed){
   Serial2.print(c); // H correlates to 0 (72), I correlates to 1 (73)
 }
 
-void sendSignal(bool passed){
-  long n = TEAM_NUMBER << 1;
-  n += passed ? 1 : 0; 
-  commsNums[TEAM_NUMBER] = passed ? 1 : 0;
-  Serial2.print(n);          
-}
-
 void showColor(){ //shows color on Arduino RGB
   delay(50);
   uint16_t clear, red, green, blue;
